@@ -38,41 +38,74 @@ function App() {
   const [state,setState] = useState([])
 
   //Fetch the data
+  
   //Convert to JSON to display the data
+  
   //setState
+  
   //Map
 
   useEffect(()=>{
+  
     // console.log('Running our useEffect!')
+    
     fetch('https://reqres.in/api/users')
+    
   //then & catch both take in call back functions
+  
   //result & error are superficial. Provide name suitable for context.
+  
     .then((result)=>{
+    
       // console.log(result)
+      
       //JSON JavaScript Object Notation
+      
       //json will return this in a form we can read
+      
       return result.json()
+      
     }).then((res)=>{
+    
       console.log(res)
+      
       setState(res.data)
+      
     }).catch((error)=>{
+    
       console.log(error)
+      
     })
+    
   } , [])
+  
   //dependency array tells useEffect to run on first render
+  
   //avoiding an infinite loop
 
   return (
+  
     <div className="App">
+    
+    
     {
+    
       state.map((person)=>{
+      
         <div>
+        
           <h1>{person.first_name}</h1>
+          
         </div>
+        
       })
+      
     }
+    
     </div>
+    
   );
+  
 }
 
 export default App;
