@@ -15,17 +15,17 @@ This lecture covers:
 
 // Set up useEffect to run a side effect as soon as the component runs
 
-// use fetch to request data via an API
+// Use fetch function to request data via an API
 
-// Handle promise the async request makes
+// Handle promise / async request
 
 // Upon success we convert to JSON
 
 // Then we set this data into STATE
 
-// in the return statement we MAP through STATE
+// In the return statement(JSX) we MAP through STATE
 
-// Rendered the DATA for each OBJECT
+// Render the DATA for each OBJECT
 
 //---------------------------------------------------------------------------------------------
 
