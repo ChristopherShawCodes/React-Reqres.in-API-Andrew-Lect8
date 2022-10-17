@@ -14,11 +14,17 @@ Lecture 8:  Youtube: https://www.youtube.com/watch?v=3zjmN8kU96M
 This lecture covers: 
 
 // Set up useEffect to run a side effect as soon as the component runs
+
 // use fetch to request data via an API
+
 // Handle promise the async request makes
+
 // Upon success we convert to JSON
+
 // Then we set this data into STATE
+
 // in the return statement we MAP through STATE
+
 // Rendered the DATA for each OBJECT
 
 //---------------------------------------------------------------------------------------------
