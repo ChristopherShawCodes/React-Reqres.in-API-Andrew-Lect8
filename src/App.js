@@ -1,23 +1,45 @@
-import logo from './logo.svg';
+import {useState,useEffect} from 'react'
 import './App.css';
 
 function App() {
+
+const [state,setState] = useState([])
+
+  useEffect(()=>{
+    fetch('https://reqres.in/api/users')
+    .then((result)=>{
+      return result.json()
+    }).then((res)=>{
+      console.log(res)
+      setState(res.data)
+    }).catch((error)=>{
+      console.log(error)
+    })
+  } , [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='Header'>
+      <nav class="navbar bg-dark">
+        <div class="container-fluid">
+          <span class="navbar-text">
+            React//Marn Stack Lecture 8
+          </span>
+    <a href='https://reqres.in/'>reqres.in</a>
+        </div>
+      </nav>
+    </div>
+    {
+      state.map((person)=>{
+        return<div className='avatar'>
+        <img src={person.avatar}/>
+        <div className='card-contents'>
+          <h1>{person.first_name} {person.last_name}</h1>
+          <p>{person.email}</p>
+        </div>
+        </div>
+      })
+    }
     </div>
   );
 }
