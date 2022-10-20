@@ -4,7 +4,7 @@ Lecture: API's and AJAX w/useEffect
 This is a basic profile application built during Lecture 8
 Date: 9-14-22
 
-Test what I built : https://framed-reqres-api.netlify.ap
+Test what I built : https://framed-reqres-api.netlify.app
 
 Lecture 8:  Youtube: https://www.youtube.com/watch?v=3zjmN8kU96M
 
